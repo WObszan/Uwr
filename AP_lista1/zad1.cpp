@@ -8,11 +8,12 @@ using namespace std;
 struct WynikGDC {
     long long k,l,gcd;
 };
+
 WynikGDC GCD(long long a, long long b) {
     if (b == 0){
       return {1, 0, a};
     }
-    WynikGDC prev = GCD(b, (a % b));
+    WynikGDC prev = GCD(b, a % b);
     WynikGDC result;
     result.gcd = prev.gcd;
     result.k = prev.l;
