@@ -57,7 +57,7 @@ long long Fi(long long a, vector<long long>& wynik){
     if (wynik[a] == 0){
       return a-1;
     }
-    for (long long j = 2; j <= a; j++) {
+    for (long long j = 2; j*j <= a; j++) {
       if (a%j == 0){
         // dla liczb pierwszych
         if (wynik[j] == 0){
